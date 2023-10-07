@@ -1,8 +1,10 @@
-#include <CanvasTriangle.h>
-#include <DrawingWindow.h>
-#include <Utils.h>
+#include "../libs/sdw/CanvasTriangle.h"
+#include "../libs/sdw/Utils.h"
+#include "../libs/sdw/DrawingWindow.h"
 #include <fstream>
 #include <vector>
+#include <SDL2/SDL.h>
+
 
 #define WIDTH 320
 #define HEIGHT 240
@@ -32,6 +34,20 @@ void handleEvent(SDL_Event event, DrawingWindow &window) {
 	}
 }
 
+std::vector<float> interpolateSingleFloats(float from, float to, int numberOfValues) {
+    if (numberOfValues <= 1) {
+        return {to};  // 如果只请求一个值，则返回“to”值
+    }
+
+    std::vector<float> result;
+    float step = (to - from) / (numberOfValues - 1);
+    for (int i = 0; i < numberOfValues; i++) {
+        result.push_back(from + step * i);
+    }
+    return result;
+}
+
+
 int main(int argc, char *argv[]) {
 	DrawingWindow window = DrawingWindow(WIDTH, HEIGHT, false);
 	SDL_Event event;
@@ -42,4 +58,8 @@ int main(int argc, char *argv[]) {
 		// Need to render the frame at the end, or nothing actually gets shown on the screen !
 		window.renderFrame();
 	}
+    std::vector<float> result;
+    result = interpolateSingleFloats(2.2, 8.5, 7);
+    for(size_t i=0; i<result.size(); i++) std::cout << result[i] << " ";
+    std::cout << std::endl;
 }
