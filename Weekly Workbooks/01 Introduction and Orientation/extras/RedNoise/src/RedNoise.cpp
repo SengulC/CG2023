@@ -87,17 +87,7 @@
 }*/
 
 
-void handleEvent(SDL_Event event, DrawingWindow &window) {
-	if (event.type == SDL_KEYDOWN) {
-		if (event.key.keysym.sym == SDLK_LEFT) std::cout << "LEFT" << std::endl;
-		else if (event.key.keysym.sym == SDLK_RIGHT) std::cout << "RIGHT" << std::endl;
-		else if (event.key.keysym.sym == SDLK_UP) std::cout << "UP" << std::endl;
-		else if (event.key.keysym.sym == SDLK_DOWN) std::cout << "DOWN" << std::endl;
-	} else if (event.type == SDL_MOUSEBUTTONDOWN) {
-		window.savePPM("output.ppm");
-		window.saveBMP("output.bmp");
-	}
-}
+
 
 
 //int main(int argc, char *argv[]) {
@@ -131,23 +121,28 @@ void handleEvent(SDL_Event event, DrawingWindow &window) {
 void drawLine(DrawingWindow &window, const CanvasPoint &p1, const CanvasPoint &p2, const Colour &color) {
     int dx = p2.x - p1.x;
     int dy = p2.y - p1.y;
-    int steps = abs(dx) > abs(dy) ? abs(dx) : abs(dy);
-    float xInc = dx / (float)steps;
-    float yInc = dy / (float)steps;
+    int steps = std::max(abs(dx), abs(dy));
+    float xInc = static_cast<float>(dx) / steps;
+    float yInc = static_cast<float>(dy) / steps;
     float x = p1.x;
     float y = p1.y;
+
+    uint32_t pixelColor = (255 << 24) + (color.red << 16) + (color.green << 8) + color.blue;
+
     for (int i = 0; i <= steps; i++) {
-        window.setPixelColour(x, y, (255 << 24) + (color.red << 16) + (color.green << 8) + color.blue);
+        window.setPixelColour(round(x), round(y), pixelColor);
         x += xInc;
         y += yInc;
     }
 }
-//画三角
+
+//画三角 draw a triangle   window name,
 void drawTriangle(DrawingWindow &window, const CanvasTriangle &triangle, const Colour &color) {
     drawLine(window, triangle.vertices[0], triangle.vertices[1], color);
     drawLine(window, triangle.vertices[1], triangle.vertices[2], color);
     drawLine(window, triangle.vertices[0], triangle.vertices[2], color);
 }
+//填图 fill the triangle
 void fillTriangle(DrawingWindow &window, const CanvasTriangle &triangle, const Colour &color) {
     std::array<CanvasPoint, 3> sortedVertices = {triangle.vertices[0], triangle.vertices[1], triangle.vertices[2]};
     std::sort(sortedVertices.begin(), sortedVertices.end(), [](const CanvasPoint &a, const CanvasPoint &b) -> bool {
@@ -172,6 +167,40 @@ void fillTriangle(DrawingWindow &window, const CanvasTriangle &triangle, const C
     }
 }
 
+void handleEvent(SDL_Event event, DrawingWindow &window) {
+    if (event.type == SDL_KEYDOWN) {
+        if (event.key.keysym.sym == SDLK_LEFT) std::cout << "LEFT" << std::endl;
+        else if (event.key.keysym.sym == SDLK_RIGHT) std::cout << "RIGHT" << std::endl;
+        else if (event.key.keysym.sym == SDLK_UP) std::cout << "UP" << std::endl;
+        else if (event.key.keysym.sym == SDLK_DOWN) std::cout << "DOWN" << std::endl;
+        else if (event.key.keysym.sym == SDLK_f) {
+            // Generate three random vertices
+            CanvasPoint p1(rand() % window.width, rand() % window.height);
+            CanvasPoint p2(rand() % window.width, rand() % window.height);
+            CanvasPoint p3(rand() % window.width, rand() % window.height);
+            CanvasTriangle triangle(p1, p2, p3);
+
+            // Generate a random color
+            Colour randomColor(rand() % 256, rand() % 256, rand() % 256);
+            fillTriangle(window, triangle, randomColor);
+            // Draw the triangle
+            Colour whiteColor(255, 255, 255);
+            drawTriangle(window, triangle, whiteColor);
+        }
+        else if (event.key.keysym.sym == SDLK_u) {
+            CanvasPoint p1(rand() % window.width, rand() % window.height);
+            CanvasPoint p2(rand() % window.width, rand() % window.height);
+            CanvasPoint p3(rand() % window.width, rand() % window.height);
+            CanvasTriangle triangle(p1, p2, p3);
+            Colour randomColor(rand() % 256, rand() % 256, rand() % 256);
+            drawTriangle(window, triangle, randomColor);
+        }
+    } else if (event.type == SDL_MOUSEBUTTONDOWN) {
+        window.savePPM("output.ppm");
+        window.saveBMP("output.bmp");
+    }
+}
+
 int main(int argc, char* argv[]) {
     DrawingWindow window = DrawingWindow(800, 600, false);
     bool running = true;
@@ -180,39 +209,16 @@ int main(int argc, char* argv[]) {
         while (window.pollForInputEvents(event)) {
             if (event.type == SDL_QUIT) {
                 running = false;
-            }
-
-            if (event.type == SDL_KEYDOWN) {
-                if (event.key.keysym.sym == SDLK_u) {
-                    // Generate three random vertices
-                    // Inside your event loop
-                    if (event.type == SDL_KEYDOWN) {
-                        if (event.key.keysym.sym == SDLK_u) { // 'u' key pressed
-
-                            // Generate three random vertices
-                            CanvasPoint p1(rand() % window.width, rand() % window.height);
-                            CanvasPoint p2(rand() % window.width, rand() % window.height);
-                            CanvasPoint p3(rand() % window.width, rand() % window.height);
-                            CanvasTriangle triangle(p1, p2, p3);
-
-                            // Generate a random color
-                            Colour randomColor(rand() % 256, rand() % 256, rand() % 256);
-                            fillTriangle(window, triangle, randomColor);  // Fill the triangle with random color
-                            // Draw the triangle
-                            Colour whiteColor(255, 255, 255);
-                            drawTriangle(window, triangle, whiteColor);
-                        }
-                    }
-
-                }
+            } else {
+                handleEvent(event, window);
             }
         }
-
         window.renderFrame();
     }
-
     return 0;
 }
+
+
 //week3-1
 //int main(int argc, char* argv[]) {
 //    DrawingWindow window = DrawingWindow(800, 600, false);
