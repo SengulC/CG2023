@@ -8,6 +8,7 @@
 #include <CanvasPoint.h>
 #include <Colour.h>
 #include <algorithm>
+#include "TextureMap.h"
 
 
 #define WIDTH 320
@@ -142,6 +143,52 @@ void drawTriangle(DrawingWindow &window, const CanvasTriangle &triangle, const C
     drawLine(window, triangle.vertices[1], triangle.vertices[2], color);
     drawLine(window, triangle.vertices[0], triangle.vertices[2], color);
 }
+
+
+void drawTexturedLine(DrawingWindow &window, const CanvasPoint &start, const CanvasPoint &end, const TextureMap &texture) {
+//    int steps = std::max(abs(end.x - start.x), abs(end.y - start.y));
+
+//    float xStep = (end.x - start.x) / steps;
+//    float yStep = (end.y - start.y) / steps;
+
+
+    float deltaX = abs(end.x - start.x);
+    float deltaY = abs(end.y - start.y);
+    int steps = std::max(deltaX, deltaY);
+    float xStep = deltaX / steps;
+    float yStep = deltaY / steps;
+    float uStep = (end.texturePoint.x - start.texturePoint.x) / steps;
+    float vStep = (end.texturePoint.y - start.texturePoint.y) / steps;
+
+    float x = start.x;
+    float y = start.y;
+    float u = start.texturePoint.x;
+    float v = start.texturePoint.y;
+
+
+    for (int i = 0; i <= steps; i++) {
+        if (u < 0 || u >= texture.width || v < 0 || v >= texture.height) {
+            std::cerr << "Texture coordinates out of bounds: u = " << u << ", v = " << v << std::endl;
+            continue;
+        }
+        if (u >= 0 && u < texture.width && v >= 0 && v < texture.height) {
+            uint32_t color = texture.pixels[int(v) * texture.width + int(u)];
+            window.setPixelColour(round(x), round(y), color);
+        } else {
+            // 处理坐标(u, v)超出纹理范围的情况，例如设置为默认颜色
+            window.setPixelColour(round(x), round(y), 0);
+        }
+
+        x += xStep;
+        y += yStep;
+        u += uStep;
+        v += vStep;
+    }
+
+
+
+}
+
 //填图 fill the triangle
 void fillTriangle(DrawingWindow &window, const CanvasTriangle &triangle, const Colour &color) {
     std::array<CanvasPoint, 3> sortedVertices = {triangle.vertices[0], triangle.vertices[1], triangle.vertices[2]};
@@ -167,6 +214,68 @@ void fillTriangle(DrawingWindow &window, const CanvasTriangle &triangle, const C
     }
 }
 
+std::array<CanvasPoint, 3> getSortedVertices(const CanvasTriangle &triangle) {
+    std::array<CanvasPoint, 3> sortedVertices = {triangle.vertices[0], triangle.vertices[1], triangle.vertices[2]};
+    std::sort(sortedVertices.begin(), sortedVertices.end(), [](const CanvasPoint &a, const CanvasPoint &b) -> bool {
+        return a.y < b.y;
+    });
+    return sortedVertices;
+}
+
+
+void fillTexturedTriangle(DrawingWindow &window, const CanvasTriangle &triangle, const TextureMap &texture) {
+    std::array<CanvasPoint, 3> sortedVertices = getSortedVertices(triangle);
+
+    auto computeIntersection = [](const CanvasPoint &a, const CanvasPoint &b, float y) -> CanvasPoint {
+        float alpha = (y - a.y) / (b.y - a.y);
+        float x = a.x + alpha * (b.x - a.x);
+        float u = a.texturePoint.x + alpha * (b.texturePoint.x - a.texturePoint.x);
+        float v = a.texturePoint.y + alpha * (b.texturePoint.y - a.texturePoint.y);
+
+        CanvasPoint resultPoint(x, y);
+        resultPoint.texturePoint = TexturePoint(u, v);
+
+        return resultPoint;
+    };
+
+
+    for (int y = static_cast<int>(sortedVertices[0].y); y < static_cast<int>(sortedVertices[1].y); y++) {
+        CanvasPoint start = computeIntersection(sortedVertices[0], sortedVertices[2], y);
+        CanvasPoint end = computeIntersection(sortedVertices[0], sortedVertices[1], y);
+
+        // 检查并交换 start 和 end，确保 start 在左边
+        if(start.x > end.x) {
+            std::swap(start, end);
+        }
+
+        drawTexturedLine(window, start, end, texture);
+    }
+
+    for (int y = static_cast<int>(sortedVertices[1].y); y <= static_cast<int>(sortedVertices[2].y); y++) {
+        CanvasPoint start = computeIntersection(sortedVertices[0], sortedVertices[2], y);
+        CanvasPoint end = computeIntersection(sortedVertices[1], sortedVertices[2], y);
+
+        // 同样，检查并交换 start 和 end
+        if(start.x > end.x) {
+            std::swap(start, end);
+        }
+
+        drawTexturedLine(window, start, end, texture);
+    }
+
+//    for (int y = static_cast<int>(sortedVertices[1].y); y <= static_cast<int>(sortedVertices[2].y); y++) {
+//        CanvasPoint start = computeIntersection(sortedVertices[0], sortedVertices[2],y );
+//        drawDebugPoint(window, start);
+//        CanvasPoint end = computeIntersection(sortedVertices[1], sortedVertices[2], y);
+//        drawDebugPoint(window, end);
+//        drawTexturedLine(window, start, end, texture);
+//
+//    }
+
+
+}
+
+
 void handleEvent(SDL_Event event, DrawingWindow &window) {
     if (event.type == SDL_KEYDOWN) {
         if (event.key.keysym.sym == SDLK_LEFT) std::cout << "LEFT" << std::endl;
@@ -175,10 +284,18 @@ void handleEvent(SDL_Event event, DrawingWindow &window) {
         else if (event.key.keysym.sym == SDLK_DOWN) std::cout << "DOWN" << std::endl;
         else if (event.key.keysym.sym == SDLK_f) {
             // Generate three random vertices
-            CanvasPoint p1(rand() % window.width, rand() % window.height);
-            CanvasPoint p2(rand() % window.width, rand() % window.height);
-            CanvasPoint p3(rand() % window.width, rand() % window.height);
-            CanvasTriangle triangle(p1, p2, p3);
+//            CanvasPoint p1(rand() % window.width, rand() % window.height);
+//            CanvasPoint p2(rand() % window.width, rand() % window.height);
+//            CanvasPoint p3(rand() % window.width, rand() % window.height);
+
+                CanvasPoint p1(160, 10);
+        p1.texturePoint = TexturePoint(195, 5);
+        CanvasPoint p2(300, 230);
+        p2.texturePoint = TexturePoint(395, 380);
+        CanvasPoint p3(10, 150);
+        p3.texturePoint = TexturePoint(65, 330);
+        // 创建三角形
+        CanvasTriangle triangle(p1, p2, p3);
 
             // Generate a random color
             Colour randomColor(rand() % 256, rand() % 256, rand() % 256);
@@ -201,22 +318,69 @@ void handleEvent(SDL_Event event, DrawingWindow &window) {
     }
 }
 
-int main(int argc, char* argv[]) {
-    DrawingWindow window = DrawingWindow(800, 600, false);
+
+
+
+int main() {
+    // 初始化窗口
+    DrawingWindow window(1200, 600, false);  // 假设您的窗口大小为800x600
+    // 加载纹理
+    TextureMap texture("/home/merlin/CG2023/Weekly Workbooks/03 Triangles and Textures/texture.ppm");
+    // 设置CanvasPoint和对应的TexturePoint
+    CanvasPoint p1(160, 10);
+    p1.texturePoint = TexturePoint(195, 5);
+    CanvasPoint p2(300, 230);
+    p2.texturePoint = TexturePoint(395, 380);
+    CanvasPoint p3(10, 150);
+    p3.texturePoint = TexturePoint(65, 330);
+    // 创建三角形
+    CanvasTriangle triangle(p1, p2, p3);
+    // 清空窗口 (假设黑色背景)
+    window.clearPixels();
+    // 填充三角形
+    fillTexturedTriangle(window, triangle, texture);
+
+
+
+    // 渲染
+    window.renderFrame();
+
+    // 事件循环，等待窗口关闭
     bool running = true;
     while (running) {
         SDL_Event event;
         while (window.pollForInputEvents(event)) {
             if (event.type == SDL_QUIT) {
                 running = false;
-            } else {
-                handleEvent(event, window);
             }
+            // 其他事件处理，如键盘、鼠标等
+            handleEvent(event, window);
         }
-        window.renderFrame();
     }
+
     return 0;
 }
+
+
+
+
+
+//int main(int argc, char* argv[]) {
+//    DrawingWindow window = DrawingWindow(800, 600, false);
+//    bool running = true;
+//    while (running) {
+//        SDL_Event event;
+//        while (window.pollForInputEvents(event)) {
+//            if (event.type == SDL_QUIT) {
+//                running = false;
+//            } else {
+//                handleEvent(event, window);
+//            }
+//        }
+//        window.renderFrame();
+//    }
+//    return 0;
+//}
 
 
 //week3-1
