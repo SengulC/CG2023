@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/usr/include/SDL2 -I"/home/merlin/CG2023/Weekly Workbooks/01 Introduction and Orientation/extras/RedNoise/libs/glm-0.9.7.2" -I"/home/merlin/CG2023/Weekly Workbooks/01 Introduction and Orientation/extras/RedNoise/libs/sdw"
 
-CXX_FLAGS = -Wall -Wextra -Wcast-align -Wfatal-errors -Werror=return-type -Wno-unused-parameter -Wno-unused-variable -Wno-ignored-attributes -std=gnu++14
+CXX_FLAGS = -g -Wall -Wextra -Wcast-align -Wfatal-errors -Werror=return-type -Wno-unused-parameter -Wno-unused-variable -Wno-ignored-attributes -O2 -fno-omit-frame-pointer -g -std=gnu++14
 

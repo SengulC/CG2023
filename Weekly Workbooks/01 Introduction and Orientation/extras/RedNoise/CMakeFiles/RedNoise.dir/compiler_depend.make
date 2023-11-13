@@ -38,6 +38,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/CanvasPoint.cpp.o: libs/sdw/CanvasPoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -140,8 +141,11 @@ CMakeFiles/RedNoise.dir/libs/sdw/CanvasPoint.cpp.o: libs/sdw/CanvasPoint.cpp \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -150,6 +154,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/CanvasPoint.cpp.o: libs/sdw/CanvasPoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -219,6 +225,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/CanvasTriangle.cpp.o: libs/sdw/CanvasTriangle.c
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -321,8 +328,11 @@ CMakeFiles/RedNoise.dir/libs/sdw/CanvasTriangle.cpp.o: libs/sdw/CanvasTriangle.c
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -331,6 +341,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/CanvasTriangle.cpp.o: libs/sdw/CanvasTriangle.c
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -401,6 +413,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/Colour.cpp.o: libs/sdw/Colour.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -503,8 +516,11 @@ CMakeFiles/RedNoise.dir/libs/sdw/Colour.cpp.o: libs/sdw/Colour.cpp \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -513,6 +529,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/Colour.cpp.o: libs/sdw/Colour.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -604,6 +622,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/DrawingWindow.cpp.o: libs/sdw/DrawingWindow.cpp
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -687,8 +706,11 @@ CMakeFiles/RedNoise.dir/libs/sdw/DrawingWindow.cpp.o: libs/sdw/DrawingWindow.cpp
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -697,6 +719,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/DrawingWindow.cpp.o: libs/sdw/DrawingWindow.cpp
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -748,6 +772,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/DrawingWindow.cpp.o: libs/sdw/DrawingWindow.cpp
   /usr/include/c++/11/stdlib.h \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/inttypes.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
@@ -949,6 +975,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/ModelTriangle.cpp.o: libs/sdw/ModelTriangle.cpp
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -956,7 +983,9 @@ CMakeFiles/RedNoise.dir/libs/sdw/ModelTriangle.cpp.o: libs/sdw/ModelTriangle.cpp
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/climits \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -1086,6 +1115,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/ModelTriangle.cpp.o: libs/sdw/ModelTriangle.cpp
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/c++/11/ext/new_allocator.h \
@@ -1134,6 +1164,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/ModelTriangle.cpp.o: libs/sdw/ModelTriangle.cpp
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -1240,6 +1272,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/RayTriangleIntersection.cpp.o: libs/sdw/RayTria
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -1247,7 +1280,9 @@ CMakeFiles/RedNoise.dir/libs/sdw/RayTriangleIntersection.cpp.o: libs/sdw/RayTria
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/climits \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -1365,6 +1400,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/RayTriangleIntersection.cpp.o: libs/sdw/RayTria
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -1436,6 +1472,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/RayTriangleIntersection.cpp.o: libs/sdw/RayTria
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -1509,6 +1547,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/TextureMap.cpp.o: libs/sdw/TextureMap.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -1611,8 +1650,11 @@ CMakeFiles/RedNoise.dir/libs/sdw/TextureMap.cpp.o: libs/sdw/TextureMap.cpp \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -1621,6 +1663,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/TextureMap.cpp.o: libs/sdw/TextureMap.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -1699,6 +1743,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/TexturePoint.cpp.o: libs/sdw/TexturePoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -1801,8 +1846,11 @@ CMakeFiles/RedNoise.dir/libs/sdw/TexturePoint.cpp.o: libs/sdw/TexturePoint.cpp \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -1811,6 +1859,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/TexturePoint.cpp.o: libs/sdw/TexturePoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -1907,6 +1957,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/Utils.cpp.o: libs/sdw/Utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -1914,7 +1965,9 @@ CMakeFiles/RedNoise.dir/libs/sdw/Utils.cpp.o: libs/sdw/Utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
   /usr/include/c++/11/bits/stl_heap.h \
@@ -1939,6 +1992,7 @@ CMakeFiles/RedNoise.dir/libs/sdw/Utils.cpp.o: libs/sdw/Utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception_ptr.h \
   /usr/include/c++/11/bits/cxxabi_init_exception.h \
@@ -1997,6 +2051,8 @@ CMakeFiles/RedNoise.dir/libs/sdw/Utils.cpp.o: libs/sdw/Utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -2073,6 +2129,7 @@ CMakeFiles/RedNoise.dir/src/RedNoise.cpp.o: src/RedNoise.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -2175,8 +2232,11 @@ CMakeFiles/RedNoise.dir/src/RedNoise.cpp.o: src/RedNoise.cpp \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -2185,6 +2245,8 @@ CMakeFiles/RedNoise.dir/src/RedNoise.cpp.o: src/RedNoise.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -2240,6 +2302,8 @@ CMakeFiles/RedNoise.dir/src/RedNoise.cpp.o: src/RedNoise.cpp \
   /usr/include/c++/11/stdlib.h \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/inttypes.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
@@ -2479,8 +2543,32 @@ CMakeFiles/RedNoise.dir/src/RedNoise.cpp.o: src/RedNoise.cpp \
   /usr/include/c++/11/bits/algorithmfwd.h \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
-  /usr/include/c++/11/bits/uniform_int_dist.h
+  /usr/include/c++/11/bits/uniform_int_dist.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  libs/sdw/TextureMap.h \
+  libs/sdw/ModelTriangle.h \
+  libs/sdw/RayTriangleIntersection.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc
 
+
+/usr/include/c++/11/bits/stl_multimap.h:
+
+/usr/include/c++/11/bits/uses_allocator.h:
+
+/usr/include/c++/11/tuple:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/c++/11/map:
 
 src/RedNoise.cpp:
 
@@ -2598,9 +2686,9 @@ libs/sdw/ModelTriangle.cpp:
 
 /usr/include/SDL2/SDL_locale.h:
 
-/usr/include/SDL2/SDL_render.h:
+/usr/include/c++/11/bits/stl_map.h:
 
-/usr/include/SDL2/SDL_metal.h:
+/usr/include/SDL2/SDL_render.h:
 
 libs/glm-0.9.7.2/glm/detail/func_exponential.inl:
 
@@ -2625,6 +2713,8 @@ libs/glm-0.9.7.2/glm/detail/type_mat3x2.hpp:
 libs/glm-0.9.7.2/glm/detail/type_mat2x2.inl:
 
 /usr/include/SDL2/SDL_scancode.h:
+
+/usr/include/c++/11/bits/invoke.h:
 
 libs/glm-0.9.7.2/glm/detail/type_vec.hpp:
 
@@ -2746,7 +2836,21 @@ libs/glm-0.9.7.2/glm/packing.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/sgxintrin.h:
 
-/usr/include/c++/11/bits/stl_construct.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/serializeintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/rtmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/rdseedintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/pkuintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/popcntintrin.h:
+
+/usr/include/c++/11/cassert:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/pconfigintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitintrin.h:
 
 libs/glm-0.9.7.2/glm/detail/type_mat4x3.hpp:
 
@@ -2761,8 +2865,6 @@ libs/glm-0.9.7.2/glm/detail/func_packing.inl:
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/c++/11/backward/binders.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
@@ -2783,10 +2885,6 @@ libs/glm-0.9.7.2/glm/detail/func_packing.inl:
 /usr/include/SDL2/SDL_gamecontroller.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
 
 libs/glm-0.9.7.2/glm/detail/func_vector_relational.hpp:
 
@@ -2815,10 +2913,6 @@ libs/glm-0.9.7.2/glm/vec3.hpp:
 /usr/lib/gcc/x86_64-linux-gnu/11/include/lwpintrin.h:
 
 /usr/include/c++/11/bits/ios_base.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vbmi2intrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -2886,7 +2980,13 @@ libs/glm-0.9.7.2/glm/trigonometric.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/11/debug/assertions.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -2916,6 +3016,12 @@ libs/glm-0.9.7.2/glm/detail/type_mat4x2.inl:
 
 /usr/include/features-time64.h:
 
+/usr/include/c++/11/backward/binders.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
 /usr/include/c++/11/bits/alloc_traits.h:
 
 /usr/include/stdc-predef.h:
@@ -2942,12 +3048,6 @@ libs/sdw/CanvasPoint.h:
 
 libs/sdw/TexturePoint.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/cetintrin.h:
-
-/usr/include/c++/11/system_error:
-
 /usr/include/c++/11/cstddef:
 
 /usr/include/SDL2/SDL_hidapi.h:
@@ -2965,6 +3065,12 @@ libs/glm-0.9.7.2/glm/detail/type_mat2x4.inl:
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitxintrin.h:
+
+/usr/include/c++/11/type_traits:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/11/cmath:
 
@@ -2988,10 +3094,6 @@ libs/glm-0.9.7.2/glm/detail/type_mat2x4.inl:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
-
-/usr/include/c++/11/debug/assertions.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
@@ -3002,13 +3104,13 @@ libs/glm-0.9.7.2/glm/detail/type_mat2x4.inl:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
+/usr/include/SDL2/SDL_metal.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
 libs/glm-0.9.7.2/glm/detail/type_vec1.hpp:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/c++/11/cassert:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/pconfigintrin.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -3026,7 +3128,7 @@ libs/glm-0.9.7.2/glm/detail/type_vec1.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/include/c++/11/cwchar:
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
@@ -3043,6 +3145,12 @@ libs/sdw/Colour.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vbmi2intrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -3110,7 +3218,13 @@ libs/sdw/DrawingWindow.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/rdseedintrin.h:
+/usr/include/c++/11/bits/stl_construct.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
+
+/usr/include/c++/11/system_error:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/cetintrin.h:
 
 libs/glm-0.9.7.2/glm/detail/type_half.hpp:
 
@@ -3128,9 +3242,13 @@ libs/glm-0.9.7.2/glm/detail/type_half.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/fxsrintrin.h:
 
+/usr/include/c++/11/ext/aligned_buffer.h:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/clflushoptintrin.h:
+
+/usr/include/c++/11/bits/erase_if.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx2intrin.h:
 
@@ -3152,11 +3270,17 @@ libs/glm-0.9.7.2/glm/detail/func_common.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
+/usr/include/c++/11/cwchar:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
 libs/glm-0.9.7.2/glm/detail/_fixes.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512ifmavlintrin.h:
 
 /usr/include/alloca.h:
+
+/usr/include/c++/11/cwctype:
 
 /usr/include/c++/11/bits/stl_heap.h:
 
@@ -3165,6 +3289,14 @@ libs/glm-0.9.7.2/glm/detail/_fixes.hpp:
 /usr/include/c++/11/cstdio:
 
 /usr/include/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/c++/11/bits/locale_facets.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
@@ -3212,6 +3344,10 @@ libs/glm-0.9.7.2/glm/geometric.hpp:
 
 /usr/include/c++/11/stdexcept:
 
+/usr/include/string.h:
+
+/usr/include/c++/11/bits/streambuf.tcc:
+
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
@@ -3220,8 +3356,6 @@ libs/glm-0.9.7.2/glm/geometric.hpp:
 
 /usr/include/c++/11/bits/locale_facets.h:
 
-/usr/include/c++/11/cwctype:
-
 libs/glm-0.9.7.2/glm/detail/type_mat4x4.hpp:
 
 /usr/include/SDL2/SDL_config.h:
@@ -3229,10 +3363,6 @@ libs/glm-0.9.7.2/glm/detail/type_mat4x4.hpp:
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/c++/11/bits/locale_facets.tcc:
 
 libs/glm-0.9.7.2/glm/detail/_vectorize.hpp:
 
@@ -3260,8 +3390,6 @@ libs/sdw/CanvasTriangle.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/popcntintrin.h:
-
 /usr/include/SDL2/SDL_haptic.h:
 
 libs/sdw/Colour.cpp:
@@ -3284,6 +3412,8 @@ libs/sdw/Colour.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
 /usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/xsaveoptintrin.h:
@@ -3303,10 +3433,6 @@ libs/sdw/Colour.cpp:
 /usr/include/c++/11/stdlib.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/bmi2intrin.h:
-
-/usr/include/c++/11/bits/streambuf.tcc:
-
-/usr/include/string.h:
 
 /usr/include/inttypes.h:
 
@@ -3379,17 +3505,3 @@ libs/glm-0.9.7.2/glm/detail/func_matrix.hpp:
 /usr/lib/gcc/x86_64-linux-gnu/11/include/lzcntintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/movdirintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitintrin.h:
-
-/usr/include/c++/11/type_traits:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitxintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/pkuintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/rtmintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/serializeintrin.h:

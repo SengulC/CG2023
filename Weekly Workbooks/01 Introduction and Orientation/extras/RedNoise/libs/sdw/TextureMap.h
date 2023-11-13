@@ -14,4 +14,9 @@ public:
 	TextureMap();
 	TextureMap(const std::string &filename);
 	friend std::ostream &operator<<(std::ostream &os, const TextureMap &point);
+
+
+
 };
+
+
